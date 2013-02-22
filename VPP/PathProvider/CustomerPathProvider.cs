@@ -54,9 +54,6 @@ namespace VPP.PathProvider
         {
             if (IsPathVirtual(virtualPath))
             {
-                var file = CreateFile(virtualPath);
-                if (file.Exists())
-                    return new CacheDependency(file.FullPath, utcStart);
                 return null;
             }
 
